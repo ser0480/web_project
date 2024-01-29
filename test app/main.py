@@ -1,6 +1,9 @@
 import sys
 import requests
 
+
+
+
 def urls(out_file):
     urls2 = sys.stdin.read().splitlines()
     
@@ -22,6 +25,7 @@ def urls(out_file):
         file.write('\n'.join(target_urls))
         
     print(f"Saved URLS {out_file}")        
+        
         
         
         
