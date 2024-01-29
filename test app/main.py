@@ -20,6 +20,9 @@ def urls(out_file):
         except requests.exceptions.MissingSchema:
             bad_urls.append(url)
             continue
+        except requests.exceptions.ConnectionError:
+            bad_urls.append(url)
+            continue
         
     with open(out_file, 'w') as file:
         file.write('\n'.join(target_urls))
